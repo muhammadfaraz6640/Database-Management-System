@@ -1,0 +1,1 @@
+select CurrentSalary/30 from staff  /*perday salary*/
