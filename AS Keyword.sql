@@ -1,0 +1,1 @@
+select CurrentSalary as salary from staff  /*change column name*/
