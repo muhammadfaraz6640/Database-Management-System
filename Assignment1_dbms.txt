@@ -1,0 +1,155 @@
+-----Wards 
+	Ward_id  int primary key identity
+	Ward_Name	nvarchar(50)
+	Beds	nvarchar(50)
+	Location	nvarchar(50)
+	Telephone_Extension BIGINT
+
+
+---------Bed
+	Bed_Number(PK)
+	Ward_id(FK)
+------Staff
+	staff_Number
+	First_Name
+	Last_Name
+	Address
+	Ph_Number
+	Date_of_Birth
+	Gender
+	NIN
+	Position
+	Cuurent_Salary
+	Salary_Scale
+	Shift
+	Ward_id
+	Qualification_id(FK)
+	Experience_id(FK)
+
+-----Qualification
+	Qualification_id(PK)	
+	date_of_Qualification
+	Type_of_Qualification
+	Institute_qualification
+
+-----Experience
+	Experience_id(PK)
+	Position
+	Start_Date
+	Finish_Date
+	Organization
+
+-------Patient
+	Patient_id
+	Patient_FirstName
+	Patient_LastName
+	Patient_Address
+	Patient_DateBirth
+	Patient_gender
+	Patient_Martital_Status
+	Patient_Date_Regd
+	Patient_Relative_id(FK)
+	LocalDoctor_id(FK)
+
+-------Patient_NextKin
+	Patient_Relative_id	
+	FullName
+	Relation_with_Patient
+	Address
+	Telephone
+
+--------LocalDoctors
+	LocalDoctor_id
+	Doctor_FUllName
+	Doctor_ClinicNo
+	Doctor_Address	
+	Doctor_Phone
+	
+--------Appointments
+	Appointment_id(PK)
+	Patient_id(FK)		
+	staff_Number(FK)
+	Date
+	time
+	Examination_RoomNo
+	
+---------WardDetails
+	WD_id(PK)
+	Ward_id(FK)
+	Patient_id(FK)
+	Date_On_WaitList
+	Expected_Stay_Days
+	Date_Admitted
+	Date_Leave
+	Actual_Date_Leave
+	Bed_id
+
+---------Drug
+	Drug_Number(PK)
+	Drug_name
+	Drug_Description
+	Dosage
+	Method_intake
+	Units_Per_unit
+	Start_date
+	Finish_Date
+
+---------Medication
+	Medication_id(PK)
+	Patient_id(FK)
+	Drug_id(FK)
+	Ward_id(FK)
+	Bed_id(FK)
+
+		
+----------Sur_NonSur_Items
+	Item_Number(PK)
+	Item_Type-->can be surgical and non surgical	
+	Item_name
+	Item_Description
+	Qty_Stock
+	Reorder_level
+	Cost_per_Item
+
+----------Pharmaceutical
+	Pharmaceutical_id(PK)
+	Drug_Number(FK)
+	Qty_Stock
+	Reorder_level
+	Cost_per_Item
+
+----------Requistion_request
+	Riquistion_number(PK)
+	Drug_id(FK)
+	Qty_drug
+	req_date
+	Staff_id(FK)
+
+-----------Requistion_Accepted
+	RAccept_id(PK)
+	Riquistion_number(FK)	
+	staff_id(FK)-->recieving_person
+	
+------------Suppliers
+	Supplier_id(PK)
+	Supply_Type-->can be surgical , non-surgical and pharma
+	Supplier_Name
+	Supplier_Address
+	Supplier_Phone
+	Supplier_Fax
+
+
+			
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
