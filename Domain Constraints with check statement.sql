@@ -8,3 +8,4 @@ insert into Domain_Constraints values('g') /*The INSERT statement conflicted wit
 insert into Domain_Constraints values('M')
 
 select * from Domain_Constraints
+create domain sex_type as char check (value in ('m','f')); /*now sex_type becomes restricted datatype*/
